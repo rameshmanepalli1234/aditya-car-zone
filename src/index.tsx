@@ -37,6 +37,10 @@ const GlobalStyle = createGlobalStyle`
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
   }
+
+  :root {
+    --color-bg-default: #000;
+  }
 `;
 
 const container = document.getElementById('root');

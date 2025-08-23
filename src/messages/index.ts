@@ -75,6 +75,18 @@ const messages = defineMessages({
     id: 'error.try.again',
     defaultMessage: 'Try Again',
   },
+  PHONE_NUMBER: {
+    id: 'infobar.phone',
+    defaultMessage: '+91 9849199569',
+  },
+  EMAIL: {
+    id: 'infobar.email',
+    defaultMessage: 'adityacarzone@gmail.com',
+  },
+  OPENING_HOURS: {
+    id: 'infobar.opening-hours',
+    defaultMessage: 'Mon - Sat: 9:00 - 20:00',
+  },
 });
 
 export default messages;

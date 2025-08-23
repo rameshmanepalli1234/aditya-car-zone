@@ -1,23 +1,11 @@
 import { FaBoxesPacking } from 'react-icons/fa6';
 import { PiEngineFill } from 'react-icons/pi';
 import { RiCustomerServiceFill } from 'react-icons/ri';
-import {
-  FaCar,
-  FaCarSide,
-  FaHome,
-  FaImages,
-  FaTools,
-  FaUser,
-} from 'react-icons/fa';
+import { FaCar, FaHome, FaImages, FaTools, FaUser } from 'react-icons/fa';
 import { IntlShape } from 'react-intl';
 import messages from '@messages';
 
-export const getNavbarUtils = (intl: IntlShape) => [
-  {
-    name: intl.formatMessage(messages.ADITYA_CAR_ZONE),
-    href: '/',
-    Icon: FaCarSide,
-  },
+export const navbarUtils = (intl: IntlShape) => [
   {
     name: intl.formatMessage(messages.HOME),
     href: '/',

@@ -2,12 +2,17 @@ import React from 'react';
 const { IntlProvider } = require('react-intl');
 import AccessControl from '@components/AccessControl';
 import NavBar from '@containers/NavBar';
+import InfoBar from '@containers/InfoBar';
+import { StyledMainContainer } from './style';
 
 const App: React.FC = () => {
   return (
     <IntlProvider locale="en" defaultLocale="en">
       <AccessControl>
-        <NavBar />
+        <StyledMainContainer>
+          <InfoBar />
+          <NavBar />
+        </StyledMainContainer>
       </AccessControl>
     </IntlProvider>
   );
