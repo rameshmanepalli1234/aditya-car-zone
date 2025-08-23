@@ -1,13 +1,17 @@
 import React from 'react';
+import { useIntl } from 'react-intl';
 import { infobarUtils } from '@utils';
-import { InfoBarProps } from './types';
+import { InfoBarItem } from './types';
 import { StyledInfoBar } from './style';
 
-const InfoBar: React.FC<InfoBarProps> = () => {
+const InfoBar: React.FC = () => {
+  const intl = useIntl();
+  const items: InfoBarItem[] = infobarUtils(intl);
+
   return (
-    <StyledInfoBar>
-      {infobarUtils.map(item => (
-        <div key={item.name} className="info-bar-item">
+    <StyledInfoBar data-testid="section-infobar">
+      {items.map((item: InfoBarItem, index: number) => (
+        <div key={index} className="info-bar-item">
           <item.Icon size={16} />
           <span>{item.name}</span>
         </div>

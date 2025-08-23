@@ -1,4 +1,4 @@
-export type InfoBarProps = {
+export interface InfoBarItem {
   name: string;
-  Icon: React.ReactNode;
-};
+  Icon: React.ComponentType<{ size: number }>;
+}
