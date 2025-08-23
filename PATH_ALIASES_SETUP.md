@@ -24,6 +24,7 @@ The following path aliases are configured in both Webpack and TypeScript:
 | `@constants`  | `src/constants/`  | Application constants                  |
 | `@contexts`   | `src/contexts/`   | React contexts                         |
 | `@messages`   | `src/messages/`   | Messages                               |
+| `@containers` | `src/containers/` | React containers                       |
 
 ## Usage Examples
 
@@ -66,6 +67,7 @@ resolve: {
     '@constants': path.resolve(__dirname, 'src/constants'),
     '@contexts': path.resolve(__dirname, 'src/contexts'),
     '@messages': path.resolve(__dirname, 'src/messages'),
+    '@containers': path.resolve(__dirname, 'src/containers'),
   },
 }
 ```
@@ -90,7 +92,8 @@ The path mappings are configured in the `compilerOptions.paths` section:
       "@services/*": ["src/services/*"],
       "@constants/*": ["src/constants/*"],
       "@contexts/*": ["src/contexts/*"],
-      "@messages": ["src/messages"]
+      "@messages": ["src/messages"],
+      "@containers": ["src/containers"]
     }
   }
 }

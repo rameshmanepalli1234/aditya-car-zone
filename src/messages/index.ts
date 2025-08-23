@@ -1,153 +1,79 @@
 import { defineMessages } from 'react-intl';
 
 const messages = defineMessages({
-  // Header messages
-  BRAND_NAME: {
-    id: 'header.brandName',
-    defaultMessage: '🚗 Aditya Car Zone',
+  ADITYA_CAR_ZONE: {
+    id: 'app.name',
+    defaultMessage: 'Aditya Car Zone',
   },
-  NAV_HOME: {
-    id: 'header.navigation.home',
+  HOME: {
+    id: 'nav.home',
     defaultMessage: 'Home',
   },
-  NAV_CARS: {
-    id: 'header.navigation.cars',
-    defaultMessage: 'Cars',
+  ABOUT_US: {
+    id: 'nav.about',
+    defaultMessage: 'About Us',
   },
-  NAV_ABOUT: {
-    id: 'header.navigation.about',
-    defaultMessage: 'About',
+  DRIVING_SCHOOL: {
+    id: 'nav.driving-school',
+    defaultMessage: 'Driving School',
   },
-  NAV_CONTACT: {
-    id: 'header.navigation.contact',
-    defaultMessage: 'Contact',
+  CARBON_CLEANING: {
+    id: 'nav.carbon-cleaning',
+    defaultMessage: 'Carbon Cleaning',
   },
-  // CarList messages
-  CAR_LIST_TITLE: {
-    id: 'carList.title',
-    defaultMessage: 'Available Cars',
+  SERVICES: {
+    id: 'nav.services',
+    defaultMessage: 'Services',
   },
-  CAR_LIST_SUBTITLE: {
-    id: 'carList.subtitle',
-    defaultMessage: 'Find your perfect ride from our collection',
+  PACKAGES: {
+    id: 'nav.packages',
+    defaultMessage: 'Packages',
   },
-  LOADING_CARS: {
-    id: 'carList.loading',
-    defaultMessage: 'Loading cars...',
+  GALLERY: {
+    id: 'nav.gallery',
+    defaultMessage: 'Gallery',
   },
-  ERROR_LOADING_CARS: {
-    id: 'carList.error',
-    defaultMessage: 'Error loading cars: {error}',
+  CONTACT_US: {
+    id: 'nav.contact',
+    defaultMessage: 'Contact Us',
   },
-  // CarCard messages
-  MILES: {
-    id: 'carCard.miles',
-    defaultMessage: 'miles',
-  },
-  // CarDetails messages
-  BACK_TO_CARS: {
-    id: 'carDetails.backToCars',
-    defaultMessage: '← Back to Cars',
-  },
-  SPECIFICATIONS: {
-    id: 'carDetails.specifications',
-    defaultMessage: 'Specifications',
-  },
-  DESCRIPTION: {
-    id: 'carDetails.description',
-    defaultMessage: 'Description',
-  },
-  FEATURES: {
-    id: 'carDetails.features',
-    defaultMessage: 'Features',
-  },
-  LOCATION: {
-    id: 'carDetails.location',
-    defaultMessage: 'Location',
-  },
-  YEAR: {
-    id: 'carDetails.year',
-    defaultMessage: 'Year:',
-  },
-  MILEAGE: {
-    id: 'carDetails.mileage',
-    defaultMessage: 'Mileage:',
-  },
-  FUEL_TYPE: {
-    id: 'carDetails.fuelType',
-    defaultMessage: 'Fuel Type:',
-  },
-  TRANSMISSION: {
-    id: 'carDetails.transmission',
-    defaultMessage: 'Transmission:',
-  },
-  ENGINE: {
-    id: 'carDetails.engine',
-    defaultMessage: 'Engine:',
-  },
-  POWER: {
-    id: 'carDetails.power',
-    defaultMessage: 'Power:',
-  },
-  COLOR: {
-    id: 'carDetails.color',
-    defaultMessage: 'Color:',
-  },
-  CONDITION: {
-    id: 'carDetails.condition',
-    defaultMessage: 'Condition:',
-  },
-  CONTACT_SELLER: {
-    id: 'carDetails.contactSeller',
-    defaultMessage: 'Contact Seller',
-  },
-  SCHEDULE_TEST_DRIVE: {
-    id: 'carDetails.scheduleTestDrive',
-    defaultMessage: 'Schedule Test Drive',
-  },
-  // ErrorBoundary messages
-  ACCESS_DENIED: {
-    id: 'errorBoundary.accessDenied',
-    defaultMessage: 'Access Denied',
-  },
-  ACCESS_DENIED_MESSAGE: {
-    id: 'errorBoundary.accessDeniedMessage',
-    defaultMessage:
-      "You don't have permission to access this application. Please check your access key and try again.",
-  },
-  RETRY_ACCESS: {
-    id: 'errorBoundary.retryAccess',
-    defaultMessage: 'Retry Access',
-  },
-  SOMETHING_WENT_WRONG: {
-    id: 'errorBoundary.somethingWentWrong',
-    defaultMessage: 'Something went wrong',
-  },
-  UNEXPECTED_ERROR: {
-    id: 'errorBoundary.unexpectedError',
-    defaultMessage: 'An unexpected error occurred. Please try again.',
-  },
-  TRY_AGAIN: {
-    id: 'errorBoundary.tryAgain',
-    defaultMessage: 'Try Again',
-  },
-  // AccessControl messages
   VALIDATING_ACCESS: {
-    id: 'accessControl.validatingAccess',
+    id: 'access.validating',
     defaultMessage: 'Validating Access...',
   },
   VALIDATING_ACCESS_MESSAGE: {
-    id: 'accessControl.validatingAccessMessage',
+    id: 'access.validating.message',
     defaultMessage: 'Please wait while we verify your access credentials.',
   },
-  ACCESS_DENIED_TITLE: {
-    id: 'accessControl.accessDeniedTitle',
+  ACCESS_DENIED: {
+    id: 'access.denied',
     defaultMessage: 'Access Denied',
   },
   ACCESS_DENIED_DESCRIPTION: {
-    id: 'accessControl.accessDeniedDescription',
+    id: 'access.denied.description',
     defaultMessage:
-      "You don't have permission to access this application. Please check your access key and try again.",
+      'You dont have permission to access this application. Please check your access key and try again.',
+  },
+  ACCESS_DENIED_MESSAGE: {
+    id: 'access.denied.message',
+    defaultMessage:
+      'You dont have permission to access this application. Please check your access key and try again.',
+  },
+  RETRY_ACCESS: {
+    id: 'access.retry',
+    defaultMessage: 'Retry Access',
+  },
+  SOMETHING_WENT_WRONG: {
+    id: 'error.something.wrong',
+    defaultMessage: 'Something went wrong',
+  },
+  UNEXPECTED_ERROR: {
+    id: 'error.unexpected',
+    defaultMessage: 'An unexpected error occurred. Please try again.',
+  },
+  TRY_AGAIN: {
+    id: 'error.try.again',
+    defaultMessage: 'Try Again',
   },
 });
 

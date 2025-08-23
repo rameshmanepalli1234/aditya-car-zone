@@ -108,7 +108,9 @@ class ErrorBoundary extends Component<Props, State> {
         <FormattedMessage {...messages.SOMETHING_WENT_WRONG} />
       </ErrorTitle>
       <ErrorMessage>
-        {this.state.error?.message || (
+        {this.state.error && this.state.error.message ? (
+          this.state.error.message
+        ) : (
           <FormattedMessage {...messages.UNEXPECTED_ERROR} />
         )}
       </ErrorMessage>

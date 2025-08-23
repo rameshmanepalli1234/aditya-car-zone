@@ -44,7 +44,8 @@
       "@services/*": ["src/services/*"],
       "@constants/*": ["src/constants/*"],
       "@contexts/*": ["src/contexts/*"],
-      "@messages": ["src/messages"]
+      "@messages": ["src/messages"],
+      "@containers/*": ["src/containers/*"]
     }
   },
   "include": ["src/**/*"],

@@ -107,7 +107,7 @@ const AccessControl: React.FC<AccessControlProps> = ({ children }) => {
       <AccessContainer>
         <AccessIcon>🚫</AccessIcon>
         <AccessTitle>
-          <FormattedMessage {...messages.ACCESS_DENIED_TITLE} />
+          <FormattedMessage {...messages.ACCESS_DENIED} />
         </AccessTitle>
         <AccessMessage>
           <FormattedMessage {...messages.ACCESS_DENIED_DESCRIPTION} />
