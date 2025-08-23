@@ -11,6 +11,8 @@
   "scripts": {
     "start": "webpack serve --mode development",
     "start:alt": "webpack serve --config webpack.dev.config.js",
+    "start:open": "webpack serve --mode development --open",
+    "open-browser": "node scripts/open-browser.js",
     "build": "webpack --mode production",
     "dev": "webpack serve --mode development",
     "lint": "eslint src --ext .ts,.tsx,.js,.jsx",

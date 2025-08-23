@@ -52,7 +52,7 @@ module.exports = (env, argv) => {
       compress: true,
       port: 3000,
       hot: true,
-      open: true,
+      open: false, // Disabled to prevent opening new tabs
       historyApiFallback: true,
       client: {
         overlay: {
@@ -60,6 +60,10 @@ module.exports = (env, argv) => {
           warnings: false,
         },
       },
+      // Enable live reload for better development experience
+      liveReload: true,
+      // Watch for file changes
+      watchFiles: ['src/**/*'],
     },
     optimization: {
       splitChunks: {

@@ -48,7 +48,7 @@ module.exports = {
     compress: true,
     port: 3000,
     hot: true,
-    open: true,
+    open: false,
     historyApiFallback: true,
     client: {
       overlay: {
