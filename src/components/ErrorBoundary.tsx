@@ -1,7 +1,7 @@
 import React, { Component, ReactNode } from 'react';
 import styled from 'styled-components';
 const { FormattedMessage } = require('react-intl');
-import messages from './messages';
+import messages from '@messages';
 
 interface Props {
   children: ReactNode;

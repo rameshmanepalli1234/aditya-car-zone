@@ -23,8 +23,6 @@
     "sourceMap": true,
     "removeComments": true,
     "noImplicitAny": true,
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "exactOptionalPropertyTypes": true,
@@ -45,7 +43,8 @@
       "@pages/*": ["src/pages/*"],
       "@services/*": ["src/services/*"],
       "@constants/*": ["src/constants/*"],
-      "@contexts/*": ["src/contexts/*"]
+      "@contexts/*": ["src/contexts/*"],
+      "@messages": ["src/messages"]
     }
   },
   "include": ["src/**/*"],

@@ -28,56 +28,14 @@ const GlobalStyle = createGlobalStyle`
   }
 
   #root {
-    min-height: 100vh;
+    min-height: 100%;
     display: flex;
     flex-direction: column;
-  }
-
-  /* Loading spinner */
-  .loading-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 400px;
-    gap: 1rem;
-  }
-
-  .loading-spinner {
-    width: 40px;
-    height: 40px;
-    border: 4px solid #f3f3f3;
-    border-top: 4px solid #007bff;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
   }
 
   @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
-  }
-
-  /* Error container */
-  .error-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 400px;
-    color: #dc3545;
-    font-size: 1.1rem;
-  }
-
-  /* Responsive design */
-  @media (max-width: 768px) {
-    .main-content {
-      padding: 1rem;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .main-content {
-      padding: 0.5rem;
-    }
   }
 `;
 

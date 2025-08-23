@@ -63,6 +63,7 @@ module.exports = (env, argv) => {
         '@services': path.resolve(__dirname, 'src/services'),
         '@constants': path.resolve(__dirname, 'src/constants'),
         '@contexts': path.resolve(__dirname, 'src/contexts'),
+        '@messages': path.resolve(__dirname, 'src/messages'),
       },
       fallback: {
         url: require.resolve('url/'),
