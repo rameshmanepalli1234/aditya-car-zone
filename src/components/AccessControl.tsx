@@ -64,8 +64,7 @@ const AccessControl: React.FC<AccessControlProps> = ({ children }) => {
     const validateAccess = async () => {
       try {
         // Get the access key from environment variables
-        const accessKey =
-          process.env['REACT_APP_ACCESS_KEY'] || process.env['ACCESS_KEY'];
+        const accessKey = process.env['ACCESS_KEY'] || '';
         const expectedKey = 'u34kkfe993943kkjerufj3343334h';
 
         // Simulate a small delay for better UX

@@ -95,4 +95,4 @@ jspm_packages/
 .vscode-test 
 
 #node_modules
-node_modules/
+node_modules/.npmrc

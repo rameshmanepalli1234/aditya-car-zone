@@ -1,7 +1,30 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
+const fs = require('fs');
+const ini = require('ini');
 require('dotenv').config();
+
+// Function to read ACCESS_KEY from .npmrc file
+function getAccessKeyFromNpmrc() {
+  try {
+    const npmrcPath = path.join(__dirname, '.npmrc');
+    if (fs.existsSync(npmrcPath)) {
+      const npmrcContent = fs.readFileSync(npmrcPath, 'utf8');
+      const npmrcConfig = ini.parse(npmrcContent);
+
+      // Get access-key-env from .npmrc and resolve environment variable
+      const accessKeyEnvVar = npmrcConfig['access-key-env'];
+      if (accessKeyEnvVar) {
+        return process.env[accessKeyEnvVar] || '';
+      }
+      return '';
+    }
+  } catch (error) {
+    console.warn('Warning: Could not read .npmrc file:', error.message);
+  }
+  return '';
+}
 
 module.exports = (env, argv) => {
   const isProduction = argv.mode === 'production';
@@ -68,9 +91,9 @@ module.exports = (env, argv) => {
         publicPath: publicUrl,
       }),
       new webpack.DefinePlugin({
-        'process.env.ACCESS_KEY': JSON.stringify(process.env.ACCESS_KEY),
+        'process.env.ACCESS_KEY': JSON.stringify(getAccessKeyFromNpmrc()),
         'process.env.REACT_APP_ACCESS_KEY': JSON.stringify(
-          process.env.ACCESS_KEY
+          getAccessKeyFromNpmrc()
         ),
       }),
     ],

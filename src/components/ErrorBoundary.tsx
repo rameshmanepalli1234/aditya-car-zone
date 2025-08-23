@@ -7,7 +7,7 @@ interface Props {
 
 interface State {
   hasError: boolean;
-  error?: Error;
+  error?: Error | null;
   isAccessDenied?: boolean;
 }
 
