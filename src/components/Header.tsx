@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+const { FormattedMessage } = require('react-intl');
+import messages from './messages';
 
 const HeaderContainer = styled.header`
   background: rgba(255, 255, 255, 0.95);
@@ -114,28 +116,30 @@ const Header: React.FC = () => {
     <HeaderContainer data-testid="header-main">
       <HeaderWrapper>
         <Logo data-testid="logo-brand">
-          <h1>🚗 Aditya Car Zone</h1>
+          <h1>
+            <FormattedMessage {...messages.BRAND_NAME} />
+          </h1>
         </Logo>
         <Navigation data-testid="navigation-main">
           <NavList>
             <li>
               <NavLink href="#home" data-testid="link-home">
-                Home
+                <FormattedMessage {...messages.NAV_HOME} />
               </NavLink>
             </li>
             <li>
               <NavLink href="#cars" data-testid="link-cars">
-                Cars
+                <FormattedMessage {...messages.NAV_CARS} />
               </NavLink>
             </li>
             <li>
               <NavLink href="#about" data-testid="link-about">
-                About
+                <FormattedMessage {...messages.NAV_ABOUT} />
               </NavLink>
             </li>
             <li>
               <NavLink href="#contact" data-testid="link-contact">
-                Contact
+                <FormattedMessage {...messages.NAV_CONTACT} />
               </NavLink>
             </li>
           </NavList>

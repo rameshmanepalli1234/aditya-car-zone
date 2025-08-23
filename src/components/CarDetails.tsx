@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+const { FormattedMessage } = require('react-intl');
 import { Car } from '@app-types/car';
+import messages from './messages';
 
 const CarDetailsContainer = styled.section`
   width: 100%;
@@ -278,7 +280,7 @@ const CarDetails: React.FC<CarDetailsProps> = ({ car, onBack }) => {
     <CarDetailsContainer data-testid="section-car-details">
       <CarDetailsHeader>
         <BackButton onClick={onBack} data-testid="button-back-list">
-          ← Back to Cars
+          <FormattedMessage {...messages.BACK_TO_CARS} />
         </BackButton>
         <CarDetailsTitle data-testid="title-car-details">
           {car.brand} {car.model}
@@ -299,50 +301,75 @@ const CarDetails: React.FC<CarDetailsProps> = ({ car, onBack }) => {
 
         <CarDetailsInfo>
           <InfoSection data-testid="section-car-specs">
-            <h3>Specifications</h3>
+            <h3>
+              <FormattedMessage {...messages.SPECIFICATIONS} />
+            </h3>
             <SpecsGrid>
               <SpecItem data-testid="spec-year">
-                <SpecLabel>Year:</SpecLabel>
+                <SpecLabel>
+                  <FormattedMessage {...messages.YEAR} />
+                </SpecLabel>
                 <SpecValue>{car.year}</SpecValue>
               </SpecItem>
               <SpecItem data-testid="spec-mileage">
-                <SpecLabel>Mileage:</SpecLabel>
-                <SpecValue>{car.mileage.toLocaleString()} miles</SpecValue>
+                <SpecLabel>
+                  <FormattedMessage {...messages.MILEAGE} />
+                </SpecLabel>
+                <SpecValue>
+                  {car.mileage.toLocaleString()}{' '}
+                  <FormattedMessage {...messages.MILES} />
+                </SpecValue>
               </SpecItem>
               <SpecItem data-testid="spec-fuel">
-                <SpecLabel>Fuel Type:</SpecLabel>
+                <SpecLabel>
+                  <FormattedMessage {...messages.FUEL_TYPE} />
+                </SpecLabel>
                 <SpecValue>{car.fuelType}</SpecValue>
               </SpecItem>
               <SpecItem data-testid="spec-transmission">
-                <SpecLabel>Transmission:</SpecLabel>
+                <SpecLabel>
+                  <FormattedMessage {...messages.TRANSMISSION} />
+                </SpecLabel>
                 <SpecValue>{car.transmission}</SpecValue>
               </SpecItem>
               <SpecItem data-testid="spec-engine">
-                <SpecLabel>Engine:</SpecLabel>
+                <SpecLabel>
+                  <FormattedMessage {...messages.ENGINE} />
+                </SpecLabel>
                 <SpecValue>{car.engineSize}</SpecValue>
               </SpecItem>
               <SpecItem data-testid="spec-power">
-                <SpecLabel>Power:</SpecLabel>
+                <SpecLabel>
+                  <FormattedMessage {...messages.POWER} />
+                </SpecLabel>
                 <SpecValue>{car.power}</SpecValue>
               </SpecItem>
               <SpecItem data-testid="spec-color">
-                <SpecLabel>Color:</SpecLabel>
+                <SpecLabel>
+                  <FormattedMessage {...messages.COLOR} />
+                </SpecLabel>
                 <SpecValue>{car.color}</SpecValue>
               </SpecItem>
               <SpecItem data-testid="spec-condition">
-                <SpecLabel>Condition:</SpecLabel>
+                <SpecLabel>
+                  <FormattedMessage {...messages.CONDITION} />
+                </SpecLabel>
                 <SpecValue>{car.condition}</SpecValue>
               </SpecItem>
             </SpecsGrid>
           </InfoSection>
 
           <InfoSection data-testid="section-car-description">
-            <h3>Description</h3>
+            <h3>
+              <FormattedMessage {...messages.DESCRIPTION} />
+            </h3>
             <CarDescription>{car.description}</CarDescription>
           </InfoSection>
 
           <InfoSection data-testid="section-car-features">
-            <h3>Features</h3>
+            <h3>
+              <FormattedMessage {...messages.FEATURES} />
+            </h3>
             <FeaturesList>
               {car.features.map((feature, index) => (
                 <FeatureItem
@@ -356,16 +383,18 @@ const CarDetails: React.FC<CarDetailsProps> = ({ car, onBack }) => {
           </InfoSection>
 
           <InfoSection data-testid="section-car-location">
-            <h3>Location</h3>
+            <h3>
+              <FormattedMessage {...messages.LOCATION} />
+            </h3>
             <CarLocationText>📍 {car.location}</CarLocationText>
           </InfoSection>
 
           <CarActions data-testid="section-car-actions">
             <ActionButton primary data-testid="button-contact-seller">
-              Contact Seller
+              <FormattedMessage {...messages.CONTACT_SELLER} />
             </ActionButton>
             <ActionButton data-testid="button-schedule-test">
-              Schedule Test Drive
+              <FormattedMessage {...messages.SCHEDULE_TEST_DRIVE} />
             </ActionButton>
           </CarActions>
         </CarDetailsInfo>

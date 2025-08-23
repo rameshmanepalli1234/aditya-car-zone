@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+const { IntlProvider } = require('react-intl');
 import Header from '@components/Header';
 import CarList from '@components/CarList';
 import CarDetails from '@components/CarDetails';
@@ -45,18 +46,20 @@ const App: React.FC = () => {
   };
 
   return (
-    <AccessControl>
-      <AppContainer>
-        <Header />
-        <MainContent>
-          {selectedCar ? (
-            <CarDetails car={selectedCar} onBack={handleBackToList} />
-          ) : (
-            <CarList onCarSelect={handleCarSelect} />
-          )}
-        </MainContent>
-      </AppContainer>
-    </AccessControl>
+    <IntlProvider locale="en" defaultLocale="en">
+      <AccessControl>
+        <AppContainer>
+          <Header />
+          <MainContent>
+            {selectedCar ? (
+              <CarDetails car={selectedCar} onBack={handleBackToList} />
+            ) : (
+              <CarList onCarSelect={handleCarSelect} />
+            )}
+          </MainContent>
+        </AppContainer>
+      </AccessControl>
+    </IntlProvider>
   );
 };
 

@@ -1,8 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+const { FormattedMessage } = require('react-intl');
 import CarCard from '@components/CarCard';
 import { Car } from '@app-types/car';
 import { useCars } from '@hooks/useCars';
+import messages from './messages';
 
 const CarListContainer = styled.section`
   width: 100%;
@@ -70,7 +72,9 @@ const CarList: React.FC<CarListProps> = ({ onCarSelect }) => {
     return (
       <div className="loading-container" data-testid="section-loading">
         <div className="loading-spinner"></div>
-        <p>Loading cars...</p>
+        <p>
+          <FormattedMessage {...messages.LOADING_CARS} />
+        </p>
       </div>
     );
   }
@@ -78,7 +82,12 @@ const CarList: React.FC<CarListProps> = ({ onCarSelect }) => {
   if (error) {
     return (
       <div className="error-container" data-testid="section-error">
-        <p>Error loading cars: {error}</p>
+        <p>
+          <FormattedMessage
+            {...messages.ERROR_LOADING_CARS}
+            values={{ error }}
+          />
+        </p>
       </div>
     );
   }
@@ -86,8 +95,12 @@ const CarList: React.FC<CarListProps> = ({ onCarSelect }) => {
   return (
     <CarListContainer data-testid="section-car-list">
       <CarListHeader>
-        <h2>Available Cars</h2>
-        <p>Find your perfect ride from our collection</p>
+        <h2>
+          <FormattedMessage {...messages.CAR_LIST_TITLE} />
+        </h2>
+        <p>
+          <FormattedMessage {...messages.CAR_LIST_SUBTITLE} />
+        </p>
       </CarListHeader>
       <CarGrid data-testid="grid-car-cards">
         {cars.map(car => (

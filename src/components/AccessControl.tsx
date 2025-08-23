@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
+const { FormattedMessage } = require('react-intl');
+import messages from './messages';
 
 interface AccessControlProps {
   children: React.ReactNode;
@@ -90,9 +92,11 @@ const AccessControl: React.FC<AccessControlProps> = ({ children }) => {
     return (
       <AccessContainer>
         <LoadingSpinner />
-        <AccessTitle>Validating Access...</AccessTitle>
+        <AccessTitle>
+          <FormattedMessage {...messages.VALIDATING_ACCESS} />
+        </AccessTitle>
         <AccessMessage>
-          Please wait while we verify your access credentials.
+          <FormattedMessage {...messages.VALIDATING_ACCESS_MESSAGE} />
         </AccessMessage>
       </AccessContainer>
     );
@@ -102,10 +106,11 @@ const AccessControl: React.FC<AccessControlProps> = ({ children }) => {
     return (
       <AccessContainer>
         <AccessIcon>🚫</AccessIcon>
-        <AccessTitle>Access Denied</AccessTitle>
+        <AccessTitle>
+          <FormattedMessage {...messages.ACCESS_DENIED_TITLE} />
+        </AccessTitle>
         <AccessMessage>
-          You don&apos;t have permission to access this application. Please
-          check your access key and try again.
+          <FormattedMessage {...messages.ACCESS_DENIED_DESCRIPTION} />
         </AccessMessage>
       </AccessContainer>
     );

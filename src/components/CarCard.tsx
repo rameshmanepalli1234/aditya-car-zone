@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+const { FormattedMessage } = require('react-intl');
 import { Car } from '../types/car';
+import messages from './messages';
 
 const CarCardContainer = styled.div`
   background: white;
@@ -170,7 +172,8 @@ const CarCard: React.FC<CarCardProps> = ({ car, onSelect }) => {
         <CarYear data-testid={`text-year-${car.id}`}>{car.year}</CarYear>
         <CarDetails>
           <CarDetailBadge data-testid={`text-mileage-${car.id}`}>
-            {car.mileage.toLocaleString()} miles
+            {car.mileage.toLocaleString()}{' '}
+            <FormattedMessage {...messages.MILES} />
           </CarDetailBadge>
           <CarDetailBadge data-testid={`text-fuel-${car.id}`}>
             {car.fuelType}

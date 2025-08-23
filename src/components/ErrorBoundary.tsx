@@ -1,5 +1,7 @@
 import React, { Component, ReactNode } from 'react';
 import styled from 'styled-components';
+const { FormattedMessage } = require('react-intl');
+import messages from './messages';
 
 interface Props {
   children: ReactNode;
@@ -87,24 +89,32 @@ class ErrorBoundary extends Component<Props, State> {
   renderAccessDenied = () => (
     <ErrorContainer>
       <ErrorIcon>🚫</ErrorIcon>
-      <ErrorTitle>Access Denied</ErrorTitle>
+      <ErrorTitle>
+        <FormattedMessage {...messages.ACCESS_DENIED} />
+      </ErrorTitle>
       <ErrorMessage>
-        You don&apos;t have permission to access this application. Please check
-        your access key and try again.
+        <FormattedMessage {...messages.ACCESS_DENIED_MESSAGE} />
       </ErrorMessage>
-      <RetryButton onClick={this.handleRetry}>Retry Access</RetryButton>
+      <RetryButton onClick={this.handleRetry}>
+        <FormattedMessage {...messages.RETRY_ACCESS} />
+      </RetryButton>
     </ErrorContainer>
   );
 
   renderError = () => (
     <ErrorContainer>
       <ErrorIcon>⚠️</ErrorIcon>
-      <ErrorTitle>Something went wrong</ErrorTitle>
+      <ErrorTitle>
+        <FormattedMessage {...messages.SOMETHING_WENT_WRONG} />
+      </ErrorTitle>
       <ErrorMessage>
-        {this.state.error?.message ||
-          'An unexpected error occurred. Please try again.'}
+        {this.state.error?.message || (
+          <FormattedMessage {...messages.UNEXPECTED_ERROR} />
+        )}
       </ErrorMessage>
-      <RetryButton onClick={this.handleRetry}>Try Again</RetryButton>
+      <RetryButton onClick={this.handleRetry}>
+        <FormattedMessage {...messages.TRY_AGAIN} />
+      </RetryButton>
     </ErrorContainer>
   );
 
