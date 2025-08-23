@@ -9,12 +9,7 @@
     "yarn": ">=1.22.0"
   },
   "scripts": {
-    "start": "node scripts/start-dev.js",
-    "start:alt": "webpack serve --config webpack.dev.config.js",
-    "start:open": "webpack serve --mode development --open",
-    "start:no-browser": "webpack serve --mode development",
-    "open-browser": "node scripts/open-browser.js",
-    "smart-open": "node scripts/smart-open-browser.js",
+    "start": "webpack serve --mode development --open",
     "build": "webpack --mode production",
     "dev": "webpack serve --mode development",
     "lint": "eslint src --ext .ts,.tsx,.js,.jsx",

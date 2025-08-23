@@ -50,7 +50,7 @@ module.exports = (env, argv) => {
         serveIndex: false,
       },
       compress: true,
-      port: 3000,
+      port: 8080,
       hot: true,
       open: true,
       historyApiFallback: true,
