@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import CarCard from './CarCard';
-import { Car } from '../types/car';
-import { useCars } from '../hooks/useCars';
+import CarCard from '@components/CarCard';
+import { Car } from '@app-types/car';
+import { useCars } from '@hooks/useCars';
 
 const CarListContainer = styled.section`
   width: 100%;

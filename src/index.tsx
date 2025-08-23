@@ -2,7 +2,7 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { createGlobalStyle } from 'styled-components';
 import App from './App';
-import ErrorBoundary from './components/ErrorBoundary';
+import ErrorBoundary from '@components/ErrorBoundary';
 
 const GlobalStyle = createGlobalStyle`
   * {

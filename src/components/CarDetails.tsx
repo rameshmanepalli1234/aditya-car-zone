@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Car } from '../types/car';
+import { Car } from '@app-types/car';
 
 const CarDetailsContainer = styled.section`
   width: 100%;

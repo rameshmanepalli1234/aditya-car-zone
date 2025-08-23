@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import Header from './components/Header';
-import CarList from './components/CarList';
-import CarDetails from './components/CarDetails';
-import AccessControl from './components/AccessControl';
-import { Car } from './types/car';
+import Header from '@components/Header';
+import CarList from '@components/CarList';
+import CarDetails from '@components/CarDetails';
+import AccessControl from '@components/AccessControl';
+import { Car } from '@app-types/car';
 
 const AppContainer = styled.div`
   min-height: 100vh;

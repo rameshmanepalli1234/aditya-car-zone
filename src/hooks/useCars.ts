@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Car } from '../types/car';
+import { Car } from '@app-types/car';
 
 // Mock data for demonstration
 const mockCars: Car[] = [

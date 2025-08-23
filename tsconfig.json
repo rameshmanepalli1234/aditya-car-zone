@@ -30,7 +30,21 @@
     "exactOptionalPropertyTypes": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
-    "noUncheckedIndexedAccess": true
+    "noUncheckedIndexedAccess": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@components/*": ["src/components/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@app-types/*": ["src/types/*"],
+      "@utils/*": ["src/utils/*"],
+      "@assets/*": ["src/assets/*"],
+      "@styles/*": ["src/styles/*"],
+      "@pages/*": ["src/pages/*"],
+      "@services/*": ["src/services/*"],
+      "@constants/*": ["src/constants/*"],
+      "@contexts/*": ["src/contexts/*"]
+    }
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist", "build"]
