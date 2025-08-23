@@ -52,7 +52,7 @@ module.exports = (env, argv) => {
       compress: true,
       port: 3000,
       hot: true,
-      open: false, // Disabled to prevent opening new tabs
+      open: true,
       historyApiFallback: true,
       client: {
         overlay: {
