@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Header from './components/Header';
 import CarList from './components/CarList';
 import CarDetails from './components/CarDetails';
+import AccessControl from './components/AccessControl';
 import { Car } from './types/car';
 
 const AppContainer = styled.div`
@@ -44,16 +45,18 @@ const App: React.FC = () => {
   };
 
   return (
-    <AppContainer>
-      <Header />
-      <MainContent>
-        {selectedCar ? (
-          <CarDetails car={selectedCar} onBack={handleBackToList} />
-        ) : (
-          <CarList onCarSelect={handleCarSelect} />
-        )}
-      </MainContent>
-    </AppContainer>
+    <AccessControl>
+      <AppContainer>
+        <Header />
+        <MainContent>
+          {selectedCar ? (
+            <CarDetails car={selectedCar} onBack={handleBackToList} />
+          ) : (
+            <CarList onCarSelect={handleCarSelect} />
+          )}
+        </MainContent>
+      </AppContainer>
+    </AccessControl>
   );
 };
 

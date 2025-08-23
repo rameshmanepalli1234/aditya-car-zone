@@ -2,6 +2,7 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { createGlobalStyle } from 'styled-components';
 import App from './App';
+import ErrorBoundary from './components/ErrorBoundary';
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -89,7 +90,9 @@ const root = createRoot(container);
 
 root.render(
   <React.StrictMode>
-    <GlobalStyle />
-    <App />
+    <ErrorBoundary>
+      <GlobalStyle />
+      <App />
+    </ErrorBoundary>
   </React.StrictMode>
 );

@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
 require('dotenv').config();
 
 module.exports = (env, argv) => {
@@ -65,6 +66,12 @@ module.exports = (env, argv) => {
         template: './public/index.html',
         filename: 'index.html',
         publicPath: publicUrl,
+      }),
+      new webpack.DefinePlugin({
+        'process.env.ACCESS_KEY': JSON.stringify(process.env.ACCESS_KEY),
+        'process.env.REACT_APP_ACCESS_KEY': JSON.stringify(
+          process.env.ACCESS_KEY
+        ),
       }),
     ],
     devServer: {
