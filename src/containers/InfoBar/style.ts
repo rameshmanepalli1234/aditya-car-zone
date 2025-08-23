@@ -6,6 +6,10 @@ export const StyledInfoBar = styled.div`
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  background-color: var(--color-bg-default);
+  background-color: var(--color-bg-tertiary);
   height: 40px;
+
+  .info-bar-item {
+    color: var(--color-text-default);
+  }
 `;

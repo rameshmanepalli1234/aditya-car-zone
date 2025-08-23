@@ -39,7 +39,10 @@ const GlobalStyle = createGlobalStyle`
   }
 
   :root {
-    --color-bg-default: #000;
+    --color-bg-default: #fff;
+    --color-bg-tertiary: #000;
+
+    --color-text-default: #fff;
   }
 `;
 
