@@ -42,7 +42,7 @@ export const headingSmall = `
   font-weight: ${typography.FONT_WEIGHT_MEDIUM};
   line-height: ${typography.LINE_HEIGHT_M};`;
 
-export const headingSmallBold = `
+export const headingSmallSemiBold = `
   ${defaultFontStyles};
   font-size: ${typography.FONT_SIZE_L};
   font-weight: ${typography.FONT_WEIGHT_SEMIBOLD};
@@ -144,6 +144,6 @@ export const textStyles = {
   labelSmall,
   mainMenuCompactMenuItem,
   mainMenuCompactMenuItemAccent,
-  headingSmallBold,
+  headingSmallSemiBold,
   bodySmallStrong,
 };

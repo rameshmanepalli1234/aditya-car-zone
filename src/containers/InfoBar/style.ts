@@ -36,6 +36,10 @@ export const StyledInfoBar = styled.div`
         ${textStyles.bodySmallStrong};
       }
 
+      @media (max-width: 700px) {
+        ${textStyles.bodyMediumStrong};
+      }
+
       //not recommended to use this, but it's a workaround to hide the text on mobile
       .info-bar-item-text {
         @media (max-width: 700px) {
@@ -51,6 +55,14 @@ export const StyledInfoBar = styled.div`
     align-items: center;
     gap: 25px;
     color: var(--color-text-default);
-    ${textStyles.headingSmallBold};
+    ${textStyles.headingSmallSemiBold};
+
+    @media (max-width: 1024px) {
+      ${textStyles.bodyMediumStrong};
+    }
+
+    @media (max-width: 700px) {
+      ${textStyles.headingSmallSemiBold};
+    }
   }
 `;
