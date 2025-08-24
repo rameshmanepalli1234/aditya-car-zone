@@ -17,3 +17,5 @@ export const infobarUtils = (intl: IntlShape) => [
     Icon: FaClock,
   },
 ];
+
+export const infoIconUtils = () => [];
