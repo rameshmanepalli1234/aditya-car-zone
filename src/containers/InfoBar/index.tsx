@@ -14,7 +14,7 @@ const InfoBar: React.FC = () => {
         {items.map((item: InfoBarItem, index: number) => (
           <div key={index} className="info-bar-item">
             <item.Icon />
-            <span>{item.name}</span>
+            <span className="info-bar-item-text">{item.name}</span>
           </div>
         ))}
       </div>

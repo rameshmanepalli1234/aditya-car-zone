@@ -6,7 +6,6 @@ export const StyledInfoBar = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
   width: 100%;
   background-color: var(--color-bg-tertiary);
   height: 40px;
@@ -14,12 +13,16 @@ export const StyledInfoBar = styled.div`
   overflow: hidden;
   padding: 0 50px;
 
+  @media (max-width: 1024px) {
+    padding: 0 20px;
+    overflow: hidden;
+  }
+
   .info-bar-left-container {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 20px;
-    flex-wrap: wrap;
 
     .info-bar-item {
       color: var(--color-text-default);
@@ -28,6 +31,17 @@ export const StyledInfoBar = styled.div`
       align-items: center;
       gap: 8px;
       ${textStyles.bodyMediumStrong};
+
+      @media (max-width: 1024px) {
+        ${textStyles.bodySmallStrong};
+      }
+
+      //not recommended to use this, but it's a workaround to hide the text on mobile
+      .info-bar-item-text {
+        @media (max-width: 700px) {
+          display: none;
+        }
+      }
     }
   }
 

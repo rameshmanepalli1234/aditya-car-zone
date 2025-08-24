@@ -72,6 +72,12 @@ export const bodySmallDefault = `
   font-weight: ${typography.FONT_WEIGHT_REGULAR};
   line-height: ${typography.LINE_HEIGHT_S};`;
 
+export const bodySmallStrong = `
+  ${defaultFontStyles};
+  font-size: ${typography.FONT_SIZE_S};
+  font-weight: ${typography.FONT_WEIGHT_SEMIBOLD};
+  line-height: ${typography.LINE_HEIGHT_S};`;
+
 export const labelLargeDefault = `
   ${defaultFontStyles};
   font-size: ${typography.FONT_SIZE_M};
@@ -139,4 +145,5 @@ export const textStyles = {
   mainMenuCompactMenuItem,
   mainMenuCompactMenuItemAccent,
   headingSmallBold,
+  bodySmallStrong,
 };
