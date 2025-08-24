@@ -12,6 +12,7 @@ export const StyledInfoBar = styled.div`
   height: 40px;
   gap: 20px;
   overflow: hidden;
+  padding: 0 50px;
 
   .info-bar-left-container {
     display: flex;
