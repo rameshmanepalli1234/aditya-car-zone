@@ -1,4 +1,4 @@
 export interface InfoBarItem {
   name: string;
-  Icon: React.ComponentType<{ size: number }>;
+  Icon: React.ComponentType;
 }
