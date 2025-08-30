@@ -37,13 +37,13 @@ export const infoIconUtils = [
     href: '#',
   },
   {
-    name: 'Youtube',
-    Icon: IoLogoYoutube,
+    name: 'LinkedIn',
+    Icon: FaLinkedin,
     href: '#',
   },
   {
-    name: 'LinkedIn',
-    Icon: FaLinkedin,
+    name: 'Youtube',
+    Icon: IoLogoYoutube,
     href: '#',
   },
 ];
