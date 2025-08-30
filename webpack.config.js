@@ -31,10 +31,11 @@ module.exports = (env, argv) => {
 
   // Get port from environment variable with fallback for production
   const port = process.env.DEV_SERVER_PORT || '3000';
-  const publicUrl =
-    process.env.PUBLICURL || (isProduction ? '/' : 'http://localhost:3000');
+  const publicUrl = isProduction
+    ? '/'
+    : process.env.PUBLICURL || 'http://localhost:3000';
 
-  // Only throw error in development mode
+  // Only warn in development mode
   if (!isProduction && !process.env.DEV_SERVER_PORT) {
     console.warn('Warning: DEV_SERVER_PORT not set, using default port 3000');
   }

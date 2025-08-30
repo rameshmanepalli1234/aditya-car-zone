@@ -30,8 +30,6 @@
     }
   ],
   "env": {
-    "DEV_SERVER_PORT": "3000",
-    "PUBLICURL": "/",
     "ACCESS_KEY": "u34kkfe993943kkjerufj3343334h"
   }
 }
