@@ -51,7 +51,7 @@ module.exports = (env, argv) => {
       path: path.resolve(__dirname, 'dist'),
       filename: isProduction ? '[name].[contenthash].js' : '[name].js',
       clean: true,
-      publicPath: isProduction ? '/' : '/',
+      publicPath: '/',
     },
     resolve: {
       extensions: ['.tsx', '.ts', '.js', '.jsx'],
@@ -105,6 +105,21 @@ module.exports = (env, argv) => {
         template: './public/index.html',
         filename: 'index.html',
         publicPath: isProduction ? '/' : publicUrl,
+        inject: true,
+        minify: isProduction
+          ? {
+              removeComments: true,
+              collapseWhitespace: true,
+              removeRedundantAttributes: true,
+              useShortDoctype: true,
+              removeEmptyAttributes: true,
+              removeStyleLinkTypeAttributes: true,
+              keepClosingSlash: true,
+              minifyJS: true,
+              minifyCSS: true,
+              minifyURLs: true,
+            }
+          : false,
       }),
       new webpack.DefinePlugin({
         'process.env.ACCESS_KEY': JSON.stringify(

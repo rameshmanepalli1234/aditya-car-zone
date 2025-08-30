@@ -1,7 +1,5 @@
 export interface InfoBarItem {
     name: string;
-    Icon: React.ComponentType<{
-        size: number;
-    }>;
+    Icon: React.ComponentType;
 }
 //# sourceMappingURL=types.d.ts.map

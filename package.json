@@ -19,7 +19,8 @@
     "type-check": "tsc --noEmit",
     "test": "echo \"No tests specified\" && exit 0",
     "prepare": "husky install",
-    "vercel-build": "webpack --mode production"
+    "vercel-build": "webpack --mode production",
+    "test-build": "yarn build && node test-build.js"
   },
   "keywords": [
     "react",
