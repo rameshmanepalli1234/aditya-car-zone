@@ -2,6 +2,7 @@ import { IntlShape } from 'react-intl';
 import { FaEnvelope, FaPhone } from 'react-icons/fa';
 import { FaClock, FaTwitter } from 'react-icons/fa6';
 import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { IoLogoYoutube } from 'react-icons/io';
 import messages from '@messages';
 
 export const infobarUtils = (intl: IntlShape) => [
@@ -33,6 +34,11 @@ export const infoIconUtils = [
   {
     name: 'Instagram',
     Icon: FaInstagram,
+    href: '#',
+  },
+  {
+    name: 'Youtube',
+    Icon: IoLogoYoutube,
     href: '#',
   },
   {
