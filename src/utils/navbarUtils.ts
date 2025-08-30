@@ -1,7 +1,8 @@
 import { FaBoxesPacking } from 'react-icons/fa6';
-import { PiEngineFill } from 'react-icons/pi';
+// import { PiEngineFill } from 'react-icons/pi';
 import { RiCustomerServiceFill } from 'react-icons/ri';
-import { FaCar, FaHome, FaImages, FaTools, FaUser } from 'react-icons/fa';
+import { FaHome, FaImages, FaTools, FaUser } from 'react-icons/fa';
+// import { FaCar } from 'react-icons/fa';
 import { IntlShape } from 'react-intl';
 import messages from '@messages';
 
@@ -16,16 +17,16 @@ export const navbarUtils = (intl: IntlShape) => [
     href: '/about',
     Icon: FaUser,
   },
-  {
-    name: intl.formatMessage(messages.DRIVING_SCHOOL),
-    href: '/driving-school',
-    Icon: FaCar,
-  },
-  {
-    name: intl.formatMessage(messages.CARBON_CLEANING),
-    href: '/carbon-cleaning',
-    Icon: PiEngineFill,
-  },
+  // {
+  //   name: intl.formatMessage(messages.DRIVING_SCHOOL),
+  //   href: '/driving-school',
+  //   Icon: FaCar,
+  // },
+  // {
+  //   name: intl.formatMessage(messages.CARBON_CLEANING),
+  //   href: '/carbon-cleaning',
+  //   Icon: PiEngineFill,
+  // },
   {
     name: intl.formatMessage(messages.SERVICES),
     href: '/services',
