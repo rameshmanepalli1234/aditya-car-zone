@@ -29,16 +29,20 @@ function getAccessKeyFromNpmrc() {
 module.exports = (env, argv) => {
   const isProduction = argv.mode === 'production';
 
-  // Get port from environment variable - no default fallback
-  const port = process.env.DEV_SERVER_PORT;
-  const publicUrl = process.env.PUBLICURL;
+  // Get port from environment variable with fallback for production
+  const port = process.env.DEV_SERVER_PORT || '3000';
+  const publicUrl =
+    process.env.PUBLICURL || (isProduction ? '/' : 'http://localhost:3000');
 
-  if (!port) {
-    throw new Error('DEV_SERVER_PORT is required in .env file');
+  // Only throw error in development mode
+  if (!isProduction && !process.env.DEV_SERVER_PORT) {
+    console.warn('Warning: DEV_SERVER_PORT not set, using default port 3000');
   }
 
-  if (!publicUrl) {
-    throw new Error('PUBLICURL is required in .env file');
+  if (!isProduction && !process.env.PUBLICURL) {
+    console.warn(
+      'Warning: PUBLICURL not set, using default http://localhost:3000'
+    );
   }
 
   return {
@@ -100,12 +104,14 @@ module.exports = (env, argv) => {
       new HtmlWebpackPlugin({
         template: './public/index.html',
         filename: 'index.html',
-        publicPath: publicUrl,
+        publicPath: isProduction ? '/' : publicUrl,
       }),
       new webpack.DefinePlugin({
-        'process.env.ACCESS_KEY': JSON.stringify(getAccessKeyFromNpmrc()),
+        'process.env.ACCESS_KEY': JSON.stringify(
+          process.env.ACCESS_KEY || getAccessKeyFromNpmrc()
+        ),
         'process.env.REACT_APP_ACCESS_KEY': JSON.stringify(
-          getAccessKeyFromNpmrc()
+          process.env.ACCESS_KEY || getAccessKeyFromNpmrc()
         ),
       }),
     ],
