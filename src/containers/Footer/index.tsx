@@ -123,8 +123,10 @@ const Footer = () => {
           </div>
         </div>
         <div className="footer-bottom">
-          <div>© 2025 Aditya Car Zone All rights reserved.</div>
-          <div>
+          <div className="footer-bottom-c">
+            © 2025 Aditya Car Zone All rights reserved.
+          </div>
+          <div className="footer-bottom-copyright-text">
             Design and Developed by{' '}
             <span className="footer-copyright-link">Aditya Car Zone</span> Pvt
             Ltd.

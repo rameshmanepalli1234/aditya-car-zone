@@ -7,6 +7,7 @@ import MenuBar from '@containers/MenuBar';
 // import Home from '@pages/Home';
 import Footer from '@containers/Footer';
 import { StyledMainContainer } from './style';
+import CarbonCleaning from '@pages/CarbonCleaning';
 
 const App: React.FC = () => {
   return (
@@ -17,6 +18,7 @@ const App: React.FC = () => {
           <MenuBar />
           <NavBar />
           {/* <Home /> */}
+          <CarbonCleaning />
           <Footer />
         </StyledMainContainer>
       </AccessControl>

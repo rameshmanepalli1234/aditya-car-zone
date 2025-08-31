@@ -170,6 +170,14 @@ export const StyledFooter = styled.div`
   .footer-top-section-contact-info-phone-number {
     color: rgba(255, 255, 255, 0.8);
   }
-`;
 
-// transition: all 0.3s ease;
+  .footer-bottom-copyright-text {
+    text-align: center;
+    word-break: break-word;
+  }
+
+  .footer-bottom-copyright-info {
+    text-align: center;
+    word-break: break-word;
+  }
+`;
