@@ -1,10 +1,16 @@
 import { FaCarAlt, FaWind } from 'react-icons/fa';
 import { StyledHome } from './style';
+import homeCarbonClearning from '../../assets/homeCarbonClearning.png';
 
 const Home = () => {
   return (
     <StyledHome>
       <div className="home-container-carbon-clearning-left-section">
+        <img
+          src={homeCarbonClearning}
+          alt="Carbon Cleaning Background"
+          className="home-carbon-cleaning-background-image"
+        />
         <div className="experience-badge">
           <span className="years">15+</span>
           Years Experience
@@ -37,7 +43,7 @@ const Home = () => {
         <div className="home-carbon-cleaning-services-container">
           <div className="feature-item">
             <FaCarAlt className="feature-icon" />
-            Premium Car Wash
+            Premium Driving School
           </div>
           <div className="feature-item">
             <FaWind className="feature-icon" />
