@@ -5,12 +5,13 @@ import { navbarUtils } from '@utils';
 import { MdOutlineKeyboardArrowRight } from 'react-icons/md';
 import { footerUtils } from '@utils';
 import { FaLocationDot, FaPhone, FaEnvelope, FaClock } from 'react-icons/fa6';
+import { IntlShape } from 'react-intl';
 
 const Footer = () => {
   const mockIntl = {
     formatMessage: (message: { defaultMessage: string }) =>
       message.defaultMessage,
-  } as any; // Type assertion to bypass IntlShape requirements for now
+  } as IntlShape;
 
   const navItems = navbarUtils(mockIntl);
 
@@ -123,7 +124,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="footer-bottom">
-          <div className="footer-bottom-c">
+          <div className="footer-bottom-copyright-info">
             © 2025 Aditya Car Zone All rights reserved.
           </div>
           <div className="footer-bottom-copyright-text">

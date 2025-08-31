@@ -12,6 +12,7 @@ import {
 } from './style';
 import { navbarUtils } from '@/utils';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import { IntlShape } from 'react-intl';
 
 const NavBar: React.FC = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -28,7 +29,7 @@ const NavBar: React.FC = () => {
   const mockIntl = {
     formatMessage: (message: { defaultMessage: string }) =>
       message.defaultMessage,
-  } as any; // Type assertion to bypass IntlShape requirements for now
+  } as IntlShape;
 
   const navItems = navbarUtils(mockIntl);
 
